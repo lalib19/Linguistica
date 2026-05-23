@@ -79,7 +79,7 @@ export default function GarmentSelector() {
 
     return (
         <div className="flex flex-col h-2/3 lg:h-4/5 w-30  lg:w-40 fixed top-42 lg:top-26 right-2  lg:right-5 justify-center items-center z-50">
-            <div className="flex flex-col  border-custom-bg-nav border-2  lg:border-5 rounded-xl lg:rounded-2xl mt-20  mb-5 w-full" >
+            <div className="flex flex-col  border-custom-bg-nav border-2  lg:border-5 rounded-xl lg:rounded-2xl mt-14 mb-3 w-full" >
                 <div className={`${styles.garmentItems} border-b-0! cursor-pointer relative group`} onClick={() => deleteModelImage()}>
                     {model.userImage.imageUrl ? (isUploading || isDeleting ? <div className="flex items-center gap-2">
                         <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -113,7 +113,7 @@ export default function GarmentSelector() {
                     onChange={e => uploadModelImage(e)}
                     accept="image/*"
                 />
-                <div className="flex flex-col items-center justify-evenly h-full w-full">
+                <div className="flex flex-col items-center justify-start gap-1 py-1 w-full">
                     <GarmentSlot
                         item={model.top}
                         type="top"
@@ -143,7 +143,7 @@ export default function GarmentSelector() {
                         onRemove={removeGarment}
                     />
                 </div>
-                <div className="flex items-center justify-center m-2">
+                <div className="flex items-center justify-center m-0">
                 </div>
                 <ImageGeneration modelImageUrl={model.userImage.imageUrl} garments={garments} />
             </div>

@@ -23,7 +23,7 @@ export default function Hero() {
             </div>
 
             <div className="flex gap-8 items-center justify-center mt-10">
-                <Link href="/men" className="group" onClick={() => dispatch(selectGender("men"))} >
+                <Link href="/men/top" className="group" onClick={() => dispatch(selectGender("men"))} >
                     <Image
                         src="/images/mannequin-homme.jpg"
                         alt="Men"
@@ -35,7 +35,7 @@ export default function Hero() {
                     />
                 </Link>
 
-                <Link href="/women" className="group" onClick={() => dispatch(selectGender("women"))} >
+                <Link href="/women/top" className="group" onClick={() => dispatch(selectGender("women"))} >
                     <Image
                         src="/images/mannequin-femme.jpg"
                         alt="Women"
