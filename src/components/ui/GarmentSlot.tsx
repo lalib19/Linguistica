@@ -17,7 +17,7 @@ export default function GarmentSlot({ item, type, placeholderIcon, alt, onRemove
             onClick={() => item.imageUrl ? onRemove(type) : undefined}
         >
             {item.imageUrl ? (
-                <div className="relative">
+                <div className="relative flex items-center justify-center ">
                     <img
                         className={`${styles.garmentImage} transition-opacity duration-300 group-hover:opacity-50`}
                         src={item.imageUrl}
@@ -30,7 +30,9 @@ export default function GarmentSlot({ item, type, placeholderIcon, alt, onRemove
                     </div>
                 </div>
             ) : (
-                <img className={styles.garmentPlaceholder} src={placeholderIcon} alt={alt} />
+                <div className="justify-center items-center flex">
+                    <img className={styles.garmentPlaceholder} src={placeholderIcon} alt={alt} />
+                </div>
             )}
         </div>
     );

@@ -11,15 +11,15 @@
 }
 
 .garmentImage {
-  height: 7rem;
+  height: 5rem;
   object-fit: contain;
   object-position: center;
   transition: all 0.2s ease-in-out;
 }
 
 .garmentPlaceholder {
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   transition: all 0.2s ease-in-out;
 }
 
@@ -37,8 +37,8 @@
   }
 
   .garmentPlaceholder {
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 5rem;
+    height: 5rem;
   }
 }
 
