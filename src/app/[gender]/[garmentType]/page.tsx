@@ -22,9 +22,9 @@ export default async function GarmentPage({ params }: PageProps) {
         <>
             {itemCategories.map((category) => {
                 return (
-                    <div key={category.categoryName}>
-                        <p className="text-5xl font-bold m-4 ml-50">{category.categoryName}</p>
-                        <ul className="grid grid-cols-[repeat(auto-fit,minmax(250px,250px))] gap-x-4 gap-y-2 p-5 mx-auto justify-center">
+                    <div key={category.categoryName} className="overflow-hidden">
+                        <p className="flex justify-center md:justify-start text-2xl md:text-5xl font-bold m-4 md:ml-50">{category.categoryName}</p>
+                        <ul className="grid grid-cols-2 gap-x-3 gap-y-2 p-4 mx-auto justify-center md:grid-cols-[repeat(auto-fit,minmax(250px,250px))] md:gap-x-4 md:p-5">
                             {category.items && category.items.length > 0 ? (
                                 <ClothingItems items={category.items} />
                             ) : (

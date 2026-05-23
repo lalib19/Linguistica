@@ -19,11 +19,12 @@ export default function MainNavigation() {
     }
 
     return (
-        <header className="flex h-16 items-center justify-between px-4 sm:px-6 lg:px-50 bg-custom-bg-nav shadow-md">
+        <header className="max-w-full bg-custom-bg-nav flex h-16 items-center justify-between px-4 md:px-50 shadow-md">
+            {/* <header className="bg-custom-bg-nav h-16">       */}
             <Link href={"/"}>
                 <Logo />
             </Link>
-            <nav>
+            <nav >
                 <ul className="flex space-x-4">
                     <li><NavLink onClick={() => dispatch(selectGender("men"))} href="/men/top">Men</NavLink></li>
                     <li><NavLink onClick={() => dispatch(selectGender("women"))} href="/women/top">Women</NavLink></li>

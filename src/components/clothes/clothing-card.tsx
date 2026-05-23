@@ -21,7 +21,7 @@ export default function ClothingCard({ item, isFavorite = false }: { item: CartI
     }
 
     return (
-        <li key={item.id} className="bg-background-secondary shadow-xl max-w-70 hover:scale-101 transition-transform">
+        <li key={item.id} className="w-full bg-background-secondary shadow-xl max-w-full md:max-w-70 hover:scale-101 transition-transform">
             <a href={`https://asos.com/${browserLanguage}/${item.url} `} target="_blank" rel="noopener noreferrer" >
                 <div className="relative group">
                     <Image
@@ -60,9 +60,10 @@ export default function ClothingCard({ item, isFavorite = false }: { item: CartI
                         <img src={iconPath} className="hover:scale-105 transition-transform " alt="heart" height={30} width={30} />
                     </button>
                 </div>
-                <div className="flex p-4 text-sm justify-between items-center">
-                    <p className="">{item.name}</p>
-                    <p className="ml-3">{isFavorite ? (item as CartItemType).price : (item as SearchResultItem).price.current.text}</p>
+                <div className="flex items-center justify-between gap-2 p-2 text-xs sm:p-4 sm:text-sm">
+                    {/* <p className="flex-1 overflow-hidden leading-tight [display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical]">{item.name}</p> */}
+                    <p className="flex-1 line-clamp-2">{item.name}</p>
+                    <p className="ml-1 shrink-0 whitespace-nowrap sm:ml-3">{isFavorite ? (item as CartItemType).price : (item as SearchResultItem).price.current.text}</p>
                 </div>
             </a>
         </li>)

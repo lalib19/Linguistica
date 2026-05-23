@@ -12,7 +12,7 @@ export default function FilterNavigation() {
     return (
         <>
             {gender && params.gender && (
-                <header className="flex h-10 items-center px-50 bg-custom-bg-nav shadow-md border-t-black border-solid border-t space-x-4">
+                <header className="flex h-10 items-center px-10 md:px-50 bg-custom-bg-nav shadow-md border-t-black border-solid border-t space-x-4">
                     <>
                         <NavLink href={`/${gender}/top`}>Top</NavLink>
                         <NavLink href={`/${gender}/pants`}>Pants</NavLink>

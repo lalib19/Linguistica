@@ -8,7 +8,7 @@ export default function ClothingItems({ items }: { items: SearchResultItem[] | C
     return (
         items.map((item) => {
             return (
-                <div key={item.id} className="flex justify-center">
+                <div key={item.id} className="flex w-full justify-center">
                     <ClothingCard key={item.id} item={item} />
                 </div>
             )
