@@ -25,7 +25,7 @@ export default function MainNavigation() {
                 <Logo />
             </Link>
             <nav >
-                <ul className="flex space-x-4">
+                <ul className="flex space-x-2 md:space-x-4">
                     <li><NavLink onClick={() => dispatch(selectGender("men"))} href="/men/top">Men</NavLink></li>
                     <li><NavLink onClick={() => dispatch(selectGender("women"))} href="/women/top">Women</NavLink></li>
                     {session ? (

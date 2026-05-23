@@ -78,8 +78,8 @@ export default function GarmentSelector() {
     }
 
     return (
-        <div className="flex flex-col h-2/3 sm:h-4/5 lg:h-4/5 w-30 sm:w-40 lg:w-40 fixed top-40 sm:top-40 lg:top-26 right-2 sm:right-3 lg:right-5 justify-center items-center z-50">
-            <div className="flex flex-col  border-custom-bg-nav border-2 sm:border-3 lg:border-5 rounded-xl lg:rounded-2xl mt-20 sm:mt-5 mb-5 w-full" >
+        <div className="flex flex-col h-2/3 lg:h-4/5 w-30  lg:w-40 fixed top-42 lg:top-26 right-2  lg:right-5 justify-center items-center z-50">
+            <div className="flex flex-col  border-custom-bg-nav border-2  lg:border-5 rounded-xl lg:rounded-2xl mt-20  mb-5 w-full" >
                 <div className={`${styles.garmentItems} border-b-0! cursor-pointer relative group`} onClick={() => deleteModelImage()}>
                     {model.userImage.imageUrl ? (isUploading || isDeleting ? <div className="flex items-center gap-2">
                         <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin"></div>

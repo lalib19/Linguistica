@@ -44,7 +44,7 @@ export default function FavoritesPage() {
             return (
                 <div key={cat} className="flex flex-col w-full ">
                     <h2 className="text-xl font-bold mb-4 ml-4 capitalize">{cat}</h2>
-                    <div className=" flex flex-wrap gap-4 mb-10 ml-3">
+                    <div className="grid grid-cols-2 gap-x-3 gap-y-2 mb-10 mx-3 md:mx-0 md:ml-3 md:grid-cols-[repeat(auto-fit,minmax(250px,250px))] md:gap-x-4 md:gap-y-4">
                         {categoryItems.map((item) => {
                             return (
                                 <ClothingCard key={item.id} item={item} isFavorite={true} />

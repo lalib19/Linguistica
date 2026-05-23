@@ -14,8 +14,9 @@ export default function Hero() {
         <main className="flex flex-col items-center h-screen">
             <h1 className="text-4xl font-bold">Welcome to StyleMe</h1>
             <div className="mt-6 p-6 bg-blue-50 border border-blue-200 rounded-lg text-center flex flex-col gap-4 font-medium">
-                <p>Begin browsing clothing items and favorite them to add to your cart</p>
+                <p>Begin browsing clothing items and favorite them to add to your cart.</p>
                 <p> Then from your favorites select which ones you would like to try on you !</p>
+                <p>Some items have been discontinued by the brands and will show as not found.</p>
                 <p className="text-sm text-blue-700">
                     ⚡ Try AI-powered virtual try-on! Get <strong>{maxGenerations} free generations</strong> when you sign in.
                 </p>
