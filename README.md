@@ -34,3 +34,30 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Redis keepalive (prevent free-tier inactivity deletion)
+
+This project includes a keepalive endpoint at `/api/redis-keepalive`.
+
+- It writes a heartbeat key (`system:keepalive:lastSeen`) to Redis.
+- A Vercel cron job in `vercel.json` calls the endpoint daily (`0 9 * * *`).
+
+### Environment variable
+
+Set this in your deployment environment:
+
+```bash
+CRON_SECRET=your-random-long-secret
+```
+
+When `CRON_SECRET` is set, the endpoint requires:
+
+```http
+Authorization: Bearer <CRON_SECRET>
+```
+
+For local testing:
+
+```bash
+curl -H "Authorization: Bearer your-random-long-secret" https://your-domain.com/api/redis-keepalive
+```
