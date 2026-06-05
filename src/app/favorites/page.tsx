@@ -53,7 +53,7 @@ export default function FavoritesPage() {
                     </div>
                 </div>
             )
-        }) : <p className="mt-8">No favorites yet. Add some items to your favorites!</p>}
+        }) : <p className="mt-8 ml-5">No favorites yet. Add some items to your favorites!</p>}
     </ul>
 
     const generationsContent: JSX.Element | null = generations.length > 0 ? (
@@ -67,7 +67,7 @@ export default function FavoritesPage() {
                 </li>
             ))}</ul>
         </div >
-    ) : <p className="mt-8">No generations yet. Create your first style!</p>;
+    ) : <p className="mt-8 ml-5">No generations yet. Create your first style!</p>;
 
     const handleTabSwitch = (newSection: "favorites" | "generations") => {
         if (newSection === displayedSection) return;
