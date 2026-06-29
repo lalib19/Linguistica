@@ -29,8 +29,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Analytics />
-      <SpeedInsights />
       <body className={redHatDisplay.className}>
         <SessionProvider>
           <ReduxProvider>
@@ -41,6 +39,8 @@ export default function RootLayout({
             <Toaster position='top-right' toastOptions={{ duration: 3000 }} />
           </ReduxProvider>
         </SessionProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
